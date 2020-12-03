@@ -1,0 +1,107 @@
+
+<DOCTYPE html>
+<html>
+   <head>
+      <title>Project</title>
+       <style>
+           body {background-color: #E59866;}
+           img {position: absolute;}
+           img.leftTop{left: 100; top: 0; width: 100px; height: 100px;}
+           img.rightTop{right: 100; top: 0; width: 100px; height: 100px;}
+           div.top{padding: 10px;}
+           div.container {border-top: solid red 2px; border-bottom: solid red 2px;}
+           #st_table{background-color: cyan; width: 60%;}
+           table{width: 60%;}
+           td {text-align: center; font-weight: bold;}
+           .pass{background-color: #11B66B; color: white;}
+           .fail{background-color: #E5666E; color:white;}
+           img.left{left: 3%; top: 300;}
+           img.right{left:80%; top:300;}
+           #btnAdd{
+               background-color:green;
+               font-weight: bold;
+               border-radius: 8px;
+               border-color: green;
+               color: white;
+               width: 200px;
+               padding: 10px;
+           }
+           #btnAdd:hover{
+               background-color:darkgreen;
+               border-color: white;
+           }
+           #clear{
+               background-color:red;
+               font-weight: bold;
+               border-radius: 8px;
+               border-color: red;
+               color: white;
+               width: 150px;
+               padding: 8px;
+           }
+           #clear:hover{
+               background-color:maroon;
+               border-color: white;
+           }
+       </style>
+    <script src="./quiz2.js"></script>
+   </head>
+   <body>
+       <div class="top">
+           <img class = "leftTop" src = "sms.png">
+           <center><h1>Student Grade Management System</h1></center>
+           <img class = "rightTop" src = "sms.png">
+       </div>
+       <div class = "container">
+       <p>
+           <center>
+               <b>Student ID:</b> <input type = "text" id = "st_id" placeholder="Student ID">
+               <b>Student Name:</b> <input type = "text" id = "st_name" placeholder="Student Name">
+               <b>Grade:</b> <select id = "st_option">
+                   <option value = ""></option>
+                   <option value = "A+">A+</option>
+                   <option value = "A">A</option>
+                   <option value = "B+">B+</option>
+                   <option Value = "B">B</option>
+                   <option value = "C+">C+</option>
+                   <option value = "C">C</option>
+                   <option value = "D+">D+</option>
+                   <option value = "D">D</option>
+                   <option value = "F">F</option>
+               </select>
+               <button onclick="AddStudent()" id="btnAdd">Add Student</button>
+           </center>
+           </p>
+       </div>
+       <img class = "left" src = "sms.png">
+       <img class = "right" src = "sms.png">
+       <div>
+       <p>
+           <center>
+               <table id = "st_table" border = "1">
+                   <thead>
+                       <td>S.No.</td>
+                       <td>Student ID</td>
+                       <td>Sudent Name</td>
+                       <td>Grade</td>
+                   </thead>
+               </table>
+               <table id = "st_table" border = "1">
+
+               <table>
+                   <tr>
+                   <th colspan="3" style="text-align:right;">Total Pass</th>
+                   <th id = "totalPass">0</th>
+                   </tr>
+                   <tr>
+                   <th colspan="3" style="text-align:right;">Total Fail</th>
+                   <th id = "totalFail">0</th>
+                   </tr>
+               </table>
+               </p>
+               <button onclick="ClearForm()" id="clear">Clear Form</button>
+           </center>
+          
+       </div>
+   </body>
+</html>
